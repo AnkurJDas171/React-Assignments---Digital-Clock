@@ -6,7 +6,6 @@ class App extends React.Component {
     super(props);
 
     this.state = { time: new Date() };
-
   }
 
   setTime = () => {
@@ -23,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="Clock">
-        <h3 id="time">{this.state.time}</h3>
+        <h3 id="time">{this.state.time.toLocaleTimeString()}</h3>
       </div>
     );
   }
